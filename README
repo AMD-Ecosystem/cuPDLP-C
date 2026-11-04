@@ -1,0 +1,37 @@
+# cuPDLP-C
+
+A C/CUDA implementation of restarted primal-dual hybrid gradient methods for linear programming.
+
+This source release is prepared for COIN-OR onboarding review (2026-10-01-r2).
+It is intended for optimization researchers, students and application developers.
+
+- Project home: https://github.com/COPT-Public/cuPDLP-C
+- Project manager: Tianhao Liu
+- Contact: tianhao.liu@sjtu.edu.cn
+- Declared owner of project-owned code: Dongdong Ge (see OWNERSHIP.txt).
+- License: MIT for project-owned code; component terms in THIRD_PARTY_NOTICES.
+- Support / bug reports / feature requests: https://github.com/COPT-Public/cuPDLP-C/issues
+- Code of conduct: https://www.coin-or.org/code-of-conduct/
+- Reference paper: https://arxiv.org/abs/2312.14832
+
+## Build, install and test
+
+Prerequisites: C/C++ compiler, CMake >=3.24, zlib development headers, Python 3 and NumPy. Bundled HiGHS 1.6.0 is built automatically. CUDA Toolkit and an NVIDIA GPU are needed only for GPU mode.
+Read INSTALL, then run `bash build.sh` from this directory.
+The default is CPU only. Use `MODE=all bash build.sh` to verify CPU and GPU.
+Success is process exit 0; failures return nonzero. Tests, their expected answers,
+acceptance tolerances and extension instructions are described in tests/README.md.
+Small models are included in examples/. VALIDATION.md records the actual tested
+configuration and results. These checks do not constitute a performance benchmark
+or validation of all optional interfaces.
+
+## Package layout
+
+- cupdlp/, interface/ and related folders: source and retained upstream material.
+- build.sh and tests/: documented build/installation checks and regression tests.
+- examples/: analytic examples with expected solutions.
+- AUTHORS and CITATION.txt: authorship and paper references.
+- LICENSE, THIRD_PARTY_NOTICES and OWNERSHIP.txt: license and ownership scope.
+- SOURCE_PROVENANCE.json and CHANGES_FOR_COIN_OR.txt: revision and changes.
+The package does not claim COIN-OR acceptance.
+The project manager is the designated maintenance and contribution-review contact.
