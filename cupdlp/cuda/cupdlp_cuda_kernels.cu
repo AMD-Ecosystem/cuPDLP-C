@@ -1,7 +1,4 @@
 /*
- * Copyright (c) 2026 Advanced Micro Devices, Inc. All rights reserved.
- * Author: Jeff Daily <jeff.daily@amd.com>
- *
  * AMD GPU (HIP/ROCm) support for the cuPDLP-C CUDA kernels.
  */
 #include "cupdlp_cuda_kernels.cuh"

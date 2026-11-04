@@ -1,6 +1,3 @@
-# Copyright (c) 2026 Advanced Micro Devices, Inc. All rights reserved.
-# Author: Jeff Daily <jeff.daily@amd.com>
-#
 # Locate the ROCm/HIP toolchain and the hipBLAS/hipSPARSE (rocBLAS/rocSPARSE)
 # libraries used by the AMD GPU build.
 

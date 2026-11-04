@@ -1,7 +1,4 @@
 /*
- * Copyright (c) 2026 Advanced Micro Devices, Inc. All rights reserved.
- * Author: Jeff Daily <jeff.daily@amd.com>
- *
  * CUDA-to-HIP compatibility header for cuPDLP-C
  *
  * On AMD (USE_HIP / __HIP_PLATFORM_AMD__): aliases CUDA symbols to HIP equivalents.
