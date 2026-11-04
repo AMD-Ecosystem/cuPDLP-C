@@ -34,11 +34,12 @@ C/C++ compiler, CMake >=3.24, zlib development headers, Python 3 and NumPy. Bund
    MODE=hip bash build.sh     # AMD GPUs with ROCm
    MODE=all bash build.sh
    Bundled HiGHS is built/installed automatically unless HIGHS_HOME is supplied.
-   Installed executables: .coinor-deps/cupdlp-cpu-install/bin/plc and/or
-   .coinor-deps/cupdlp-gpu-install/bin/plc. Shared libraries are beside them in lib/.
+   Installed executables: .coinor-deps/cupdlp-cpu-install/bin/plc,
+   .coinor-deps/cupdlp-gpu-install/bin/plc and/or
+   .coinor-deps/cupdlp-hip-install/bin/plc. Shared libraries are beside them in lib/.
    Each mode runs four CTest cases, the same installed test suite, and the
    independent tiny LP checker. A checker-failure regression then runs.
-   Keep the external HiGHS and CUDA libraries at their configured locations.
+   Keep the external HiGHS and CUDA or ROCm libraries at their configured locations.
 
 All build/test commands return nonzero on failure. Numerical reports under
 tests/logs/ contain pass=true on success, with per-invocation raw output folders.
