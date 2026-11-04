@@ -19,7 +19,7 @@ It is intended for optimization researchers, students and application developers
 Prerequisites: C/C++ compiler, CMake >=3.24, zlib development headers, Python 3 and NumPy. Bundled HiGHS 1.6.0 is built automatically. CUDA Toolkit and an NVIDIA GPU are needed only for GPU mode.
 Read INSTALL, then run `bash build.sh` from this directory.
 The default is CPU only. Use `MODE=all bash build.sh` to verify CPU and GPU.
-AMD GPUs are supported through ROCm (hipBLAS and hipSPARSE): configure with `-DUSE_HIP=ON` in place of `-DBUILD_CUDA=ON`, and optionally set `CMAKE_HIP_ARCHITECTURES` to the target GPU, for example `gfx90a`, `gfx1100` or `gfx1201`. `ROCM_PATH` defaults to `/opt/rocm`.
+For AMD GPUs with ROCm (hipBLAS and hipSPARSE), use `MODE=hip bash build.sh`; see INSTALL.
 Success is process exit 0; failures return nonzero. Tests, their expected answers,
 acceptance tolerances and extension instructions are described in tests/README.md.
 Small models are included in examples/. VALIDATION.md records the actual tested

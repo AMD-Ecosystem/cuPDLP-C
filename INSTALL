@@ -24,9 +24,14 @@ C/C++ compiler, CMake >=3.24, zlib development headers, Python 3 and NumPy. Bund
    export GPU_ARCH=89
    GPU_ARCH defaults to native; use 89 for RTX 4090 or 90 for H100.
 
+   For AMD GPUs, install ROCm (hipBLAS and hipSPARSE) instead and use MODE=hip.
+   export ROCM_PATH=/opt/rocm
+   GPU_ARCH is optional; e.g. gfx90a for MI200 or gfx1100 for Radeon RX 7900.
+
 4. Choose:
    MODE=cpu bash build.sh     # no CUDA required (also the default)
    MODE=gpu bash build.sh
+   MODE=hip bash build.sh     # AMD GPUs with ROCm
    MODE=all bash build.sh
    Bundled HiGHS is built/installed automatically unless HIGHS_HOME is supplied.
    Installed executables: .coinor-deps/cupdlp-cpu-install/bin/plc and/or
